@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => {
       base: '/food-calorie-estimator/',
       plugins: [react()],
       define: {
-        'process.env.VITE_GEMINI_API_KEY': JSON.stringify(env.VITE_GEMINI_API_KEY)
+        'import.meta.env.VITE_GEMINI_API_KEY': JSON.stringify(env.VITE_GEMINI_API_KEY)
       },
       resolve: {
         alias: {

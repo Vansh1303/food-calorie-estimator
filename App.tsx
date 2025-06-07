@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { ImageUploader } from './components/ImageUploader';
 import { CalorieDisplay } from './components/CalorieDisplay';
@@ -26,7 +25,7 @@ const App: React.FC = () => {
   const [showNextStepOptions, setShowNextStepOptions] = useState(false);
 
   useEffect(() => {
-    if (!process.env.VITE_GEMINI_API_KEY) {
+    if (!import.meta.env.VITE_GEMINI_API_KEY) {
       setApiKeyMissing(true);
       console.warn("VITE_GEMINI_API_KEY environment variable is not set. Calorie estimation will not work.");
     }

@@ -1,13 +1,12 @@
-
 import { GoogleGenAI, GenerateContentResponse } from "@google/genai";
 
 // API_KEY is expected to be set in the environment.
-const API_KEY = process.env.VITE_GEMINI_API_KEY;
+const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 
 export const estimateCaloriesFromImage = async (base64ImageData: string, mimeType: string): Promise<string> => {
   if (!API_KEY) {
     // This check is more for robustness, App.tsx also checks and informs user.
-    throw new Error("API_KEY is not configured. Please set the API_KEY environment variable.");
+    throw new Error("API_KEY is not configured. Please set the VITE_GEMINI_API_KEY environment variable.");
   }
 
   const ai = new GoogleGenAI({ apiKey: API_KEY });
