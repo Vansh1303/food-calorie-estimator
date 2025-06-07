@@ -2,7 +2,7 @@
 import { GoogleGenAI, GenerateContentResponse } from "@google/genai";
 
 // API_KEY is expected to be set in the environment.
-const API_KEY = process.env.API_KEY;
+const API_KEY = process.env.VITE_GEMINI_API_KEY;
 
 export const estimateCaloriesFromImage = async (base64ImageData: string, mimeType: string): Promise<string> => {
   if (!API_KEY) {

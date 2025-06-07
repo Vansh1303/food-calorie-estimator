@@ -26,9 +26,9 @@ const App: React.FC = () => {
   const [showNextStepOptions, setShowNextStepOptions] = useState(false);
 
   useEffect(() => {
-    if (!process.env.API_KEY) {
+    if (!process.env.VITE_GEMINI_API_KEY) {
       setApiKeyMissing(true);
-      console.warn("API_KEY environment variable is not set. Calorie estimation will not work.");
+      console.warn("VITE_GEMINI_API_KEY environment variable is not set. Calorie estimation will not work.");
     }
   }, []);
 
