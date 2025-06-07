@@ -1,0 +1,7 @@
+{
+  "name": "Food Calorie Estimator",
+  "description": "An application that estimates the calorie count of food items from an uploaded image using AI. Upload a picture of your meal to get an approximate calorie breakdown.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
