@@ -27,30 +27,26 @@ A modern web application that uses AI to estimate calories from food images. Bui
 - Google Gemini API key
 - Modern web browser with camera access
 
-## Installation 🚀
+## Setup Instructions
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Vansh1303/food-calorie-estimator.git
-   cd food-calorie-estimator
-   ```
-
+1. Clone the repository
 2. Install dependencies:
    ```bash
    npm install
    ```
-
-3. Create a `.env.local` file in the root directory and add your Gemini API key:
+3. Create a `.env.local` file in the root directory:
+   ```bash
+   cp .env.example .env.local
    ```
-   GEMINI_API_KEY=your_api_key_here
+4. Get your Gemini API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
+5. Add your API key to `.env.local`:
    ```
-
-4. Start the development server:
+   VITE_GEMINI_API_KEY=your_api_key_here
+   ```
+6. Start the development server:
    ```bash
    npm run dev
    ```
-
-5. Open [http://localhost:5173](http://localhost:5173) in your browser
 
 ## Usage 📱
 
@@ -69,7 +65,7 @@ A modern web application that uses AI to estimate calories from food images. Bui
 
 | Variable | Description |
 |----------|-------------|
-| `GEMINI_API_KEY` | Your Google Gemini API key |
+| `VITE_GEMINI_API_KEY` | Your Google Gemini API key |
 
 ## Development 🛠
 
@@ -113,3 +109,22 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Vansh - [GitHub](https://github.com/Vansh1303)
 
 Project Link: [https://github.com/Vansh1303/food-calorie-estimator](https://github.com/Vansh1303/food-calorie-estimator)
+
+## Security Notes
+
+- Never commit your `.env.local` file to version control
+- Keep your API key secure and restrict it in Google Cloud Console
+- The `.env.local` file is already in `.gitignore`
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+
+## Technologies Used
+
+- React
+- TypeScript
+- Vite
+- Gemini API
